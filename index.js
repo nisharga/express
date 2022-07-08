@@ -63,9 +63,6 @@ async function run() {
     app.get("/order", async (req, res) => {
       const email2 = req.query.email;
       console.log(email2);
-      //   console.log(typeof email);
-      //   const email = "vewikep515@dkb3.com";
-      //   console.log(email);
       const query = { email: email2 };
       const cursor = dbCollection.find(query);
       const users = await cursor.toArray();
@@ -92,7 +89,7 @@ async function run() {
       console.log("Data received", dataGet);
       const result = await dbCollection.insertOne(dataGet);
       res.send("data paisi res e");
-      console.log(result, "gese data");
+      console.log(result, "gese data all");
     });
 
     app.delete("/user/:id", async (req, res) => {
