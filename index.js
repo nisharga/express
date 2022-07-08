@@ -3,7 +3,7 @@ const cors = require("cors");
 const bodyParser = require("body-parser");
 const { MongoClient, ServerApiVersion } = require("mongodb");
 const app = express();
-const port = 5000;
+const port = process.env.PORT || 5000;
 const ObjectId = require("mongodb").ObjectId;
 
 app.get("/", (req, res) => {
